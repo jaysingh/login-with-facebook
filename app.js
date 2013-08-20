@@ -3,8 +3,8 @@ var express = require('express')
   , util = require('util')
   , FacebookStrategy = require('passport-facebook').Strategy;
 
-var FACEBOOK_APP_ID = "--insert-facebook-app-id-here--"
-var FACEBOOK_APP_SECRET = "--insert-facebook-app-secret-here--";
+var FACEBOOK_APP_ID = "passport-facebook-test-app"
+var FACEBOOK_APP_SECRET = "some-secret";
 
 
 // Passport session setup.
@@ -109,6 +109,7 @@ app.get('/logout', function(req, res){
 });
 
 app.listen(3000);
+console.log("Application running on port 3000");
 
 
 // Simple route middleware to ensure user is authenticated.
